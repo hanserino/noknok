@@ -4,15 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nok Nok</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style id="et-divi-userfonts">
+        @font-face { 
+            font-family: "CardinalFruit Medium"; 
+            font-display: swap;  
+            src: url("https://noknokregnskap.no/wp-content/uploads/et-fonts/cardinalfruit-medium.otf") format("opentype"); 
+        }
+        @font-face { 
+            font-family: "Helvetica"; 
+            font-display: swap;  
+            src: url("https://noknokregnskap.no/wp-content/uploads/et-fonts/Helvetica.ttf") format("truetype"), url("https://noknokregnskap.no/wp-content/uploads/et-fonts/Helvetica.otf") format("opentype"); 
+        }
+        </style>
+        <link rel='stylesheet' id='uaf_client_css-css'  href='https://noknokregnskap.no/wp-content/uploads/useanyfont/uaf.css?ver=1635755978' type='text/css' media='all' />
+
+        <meta name='robots' content='max-image-preview:large' />
 
     <style>
+
+        :root {
+            --main-green: #154222;
+            --main-beige: #FFFBCC;
+        }
 
         body {
             font-size: 100%;
             font-family: Arial, Helvetica, sans-serif;
+            background: var(--main-beige);
+            color: var(--main-green);
             padding: 0;
             margin: 0;
+        }
+
+        #header {
+            background: white;
         }
 
         #chat-container{
@@ -135,9 +162,6 @@
             transition-delay: 9s;
         }
 
-        .header_img{
-            display: block;
-        }
 
 
         .nav {
@@ -164,7 +188,7 @@
             display: block;
             padding: 1rem;
             text-decoration: none;
-            color: #154222;
+            color: var(--main-green);
         }
         .nav__logo{
             font-size: 3rem;
@@ -174,17 +198,32 @@
 
         .header__img {
             overflow: hidden;
-            max-height: 70vh;
+            height: 80vh;
+            width: 100%;
         }
         .header__img-img{
             display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
         }
 
+
+        main section {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        h1 {
+            font-family:'cardinal-fruit-semi',Georgia,"Times New Roman",serif;
+            font-size: 3rem;
+        }
 
     </style>
 </head>
 <body>
-    <div id="header">
+    <header id="header">
         <div class="nav">
             <a href="" class="nav__logo">
                 <img src="logo.svg" alt="">
@@ -244,7 +283,17 @@
         <div class="header__img">
             <img class="header__img-img" src="bg-2.jpg" alt="" />
         </div>
-    </div>
+    </header>
+    <main>
+        <section id="old-top">
+            <h1>Regnskap på ett sted.<br/>Hjelpen også.</h1>
+            <div>
+                <p>Nok Nok er alt du trenger for å gjøre regnskapet ditt, med en ekte hjelper inni appen.</p>
+            </div>
+
+            <img src="robot.svg" alt="">
+        </section>
+    </main>
     
 
     <script src="main.js"></script>
