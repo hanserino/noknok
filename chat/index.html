@@ -6,28 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nok Nok</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <style id="et-divi-userfonts">
-        @font-face { 
-            font-family: "CardinalFruit Medium"; 
-            font-display: swap;  
-            src: url("https://noknokregnskap.no/wp-content/uploads/et-fonts/cardinalfruit-medium.otf") format("opentype"); 
-        }
-        @font-face { 
-            font-family: "Helvetica"; 
-            font-display: swap;  
-            src: url("https://noknokregnskap.no/wp-content/uploads/et-fonts/Helvetica.ttf") format("truetype"), url("https://noknokregnskap.no/wp-content/uploads/et-fonts/Helvetica.otf") format("opentype"); 
-        }
-        </style>
-        <link rel='stylesheet' id='uaf_client_css-css'  href='https://noknokregnskap.no/wp-content/uploads/useanyfont/uaf.css?ver=1635755978' type='text/css' media='all' />
-
-        <meta name='robots' content='max-image-preview:large' />
-
+    
     <style>
 
         :root {
             --main-green: #154222;
             --main-beige: #FFFBCC;
         }
+
+        @font-face { 
+            font-family: "CardinalFruit Medium"; 
+            font-display: swap;  
+            src: url("assets/fonts/cardinalfruit-medium.otf") format("opentype"); 
+        }
+      
 
         body {
             font-size: 100%;
@@ -43,11 +35,10 @@
         }
 
         #chat-container{
-            background:transparent;
-            max-width: 50vw;
-            padding: 2rem;
+            max-width: 960px;
+            margin: 0 auto;
             font-size: .95rem;
-            position: absolute;            
+            position: relative;            
             z-index: 1;
         }
 
@@ -55,10 +46,11 @@
             display: flex;
             flex-direction: column;
             list-style: none;
-            padding: 0;
+            padding: 0 0 0 1rem;
             margin: 0;
-            position: relative;
-            width: 100%;
+            position: absolute;
+            width: 50%;
+            margin-top: 3rem;
         }
 
         .chat-list-item {
@@ -69,15 +61,15 @@
             margin: 0 0 1rem 0;
             padding: 0 2.5rem;
             opacity: 0;
-            transform: scale(0) translate(-100%, -50%);
-            transition-duration: .2s;
+            transform: scale(0) translate(-50%, 0%);
+            transition-duration: .15s;
             transition-delay: 0;
             transition-property: all;
-            transition-timing-function: ease-in-out;
+            transition-timing-function: ease-out;
         }
     
         .chat-list-item:nth-child(odd) {
-            transform: scale(0) translate(100%, -50%);
+            transform: scale(0) translate(50%, 0%);
         }
 
         .chat-list-item.nok {
@@ -216,7 +208,7 @@
         }
         
         h1 {
-            font-family:'cardinal-fruit-semi',Georgia,"Times New Roman",serif;
+            font-family:'CardinalFruit Medium', Georgia, "Times New Roman", serif;
             font-size: 3rem;
         }
 
