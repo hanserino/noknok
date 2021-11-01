@@ -41,7 +41,7 @@
         }, startTime);
     }
     
-    $(".chat-list-item").each(function(index) {  
+    $(".animItem").each(function(index) {  
         var item = $(this),  
         baseTime = 2000,  
         highlightTime = baseTime * index,  
