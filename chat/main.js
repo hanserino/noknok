@@ -11,8 +11,6 @@
      );
  };
  
-
-
  
  function init() {
      /**
@@ -22,14 +20,23 @@
     document.body.setAttribute("data-touch", isTouchDevice());
     document.body.setAttribute("data-loaded", true);
 
+    function scrollAnimation($el){
+        $el.scroll();
+
+        $el.animate({
+            scrollTop: 1000
+        }, 2000);
+    }
+
 
     function startHighLighting(item, startTime, endTime) {    
         setInterval(function() {  
             setInterval(function() {  
                 item.addClass('active');
+                
                 setInterval(function() {  
-                    item.addClass('next');  
-                }, 2000);  
+                    item.addClass('next');
+                }, 3000);  
             }, endTime);
         }, startTime);
     }
@@ -40,7 +47,12 @@
         highlightTime = baseTime * index,  
         unhighlightTime = baseTime * (index + 1);  
     
-        startHighLighting(item, highlightTime, unhighlightTime);  
+        startHighLighting(item, highlightTime, unhighlightTime);
+
+        if(index > 5){
+            //scrollAnimation($('.chat-list'));
+        }
+
     });
 
  }

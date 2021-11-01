@@ -52,6 +52,9 @@
             position: absolute;
             width: 50%;
             margin-top: 3rem;
+            overflow: hidden;
+            max-height: 55vh;
+
         }
 
         .chat-list-item {
@@ -59,7 +62,7 @@
             flex-direction: column;
             position: relative;
             color: #2e2e2e;
-            margin: 0 0 1rem 0;
+            margin: 0 0 2rem 0;
             padding: 0 2.5rem;
             opacity: 0;
             transform: scale(0) translate(-50%, 0%);
@@ -196,12 +199,10 @@
         h1 {
             font-family:'CardinalFruit Medium', Georgia, "Times New Roman", serif;
             font-size: 3rem;
+            margin-top: 0;
         }
 
-        .dots {
-            
-        }
-
+        
         @keyframes wave {
             0% {opacity: .35;}
             0%, 60%, 100% {
@@ -228,6 +229,21 @@
 
         .dot:nth-child(2) {animation-delay: -1.1s;}
         .dot:nth-child(3) {animation-delay: -0.9s;}
+
+        #first-section {
+            display: flex;
+            align-items: flex-start;
+            padding: 3rem 0;
+        }
+
+        #first-section img {
+            display: inline-block;
+            max-width: 40%;
+        }
+
+        #first-section > div {
+            
+        }
 
     </style>
 
@@ -288,21 +304,96 @@
                         </div>
                     </div>
                 </li>
-                
+
+                <li class="chat-list-item nok">
+                    <div class="chat-list-item__inner">
+                        <div class="chat-list-item__img">
+                            <img src="suit.jpg">
+                        </div>
+                        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                        <div class="chat-list-item__text">
+                            Er det noe mer du lurer på? 
+                        </div>
+                    </div>
+                </li>
+
+                <li class="chat-list-item me">
+                    <div class="chat-list-item__inner">
+                        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                        <div class="chat-list-item__text">
+                            Jeg vurderer å sette opp en repeterende faktura. Koster dette noe ekstra?
+                        </div>
+                    </div>
+                </li>
+
+                <li class="chat-list-item nok">
+                    <div class="chat-list-item__inner">
+                        <div class="chat-list-item__img">
+                            <img src="suit.jpg">
+                        </div>
+                        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                        <div class="chat-list-item__text">
+                            Nei, dette er inkludert i prisen. Vil du ha hjelp med å sette det opp?
+                        </div>
+                    </div>
+                </li>
+
+                <li class="chat-list-item me">
+                    <div class="chat-list-item__inner">
+                        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                        <div class="chat-list-item__text">
+                            Gjerne det! 
+                        </div>
+                    </div>
+                </li>
+
+                <li class="chat-list-item nok">
+                    <div class="chat-list-item__inner">
+                        <div class="chat-list-item__img">
+                            <img src="suit.jpg">
+                        </div>
+                        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                        <div class="chat-list-item__text">
+                            Her er enda litt mer tekst for å fylle opp skjermen din. Funker det? 
+                        </div>
+                    </div>
+                </li>
+
+                <li class="chat-list-item me">
+                    <div class="chat-list-item__inner">
+                        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                        <div class="chat-list-item__text">
+                           Jeg elsker å chatte. Keep it coming!  
+                        </div>
+                    </div>
+                </li>
+
+                <li class="chat-list-item nok">
+                    <div class="chat-list-item__inner">
+                        <div class="chat-list-item__img">
+                            <img src="suit.jpg">
+                        </div>
+                        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+                        <div class="chat-list-item__text">
+                           True story, jeg kjøpte meg en båt i helga. Jeg har aldri hatt en båt, men har alltid hatt lyst på en. Nå står den i en marina i Son, men jeg får hentet den til helga. Gleder meg!
+                        </div>
+                    </div>
+                </li>
+
+
             </ul>
         </div>
 
         <div class="header__img">
-            <img class="header__img-img" src="bg-2.jpg" alt="" />
+            <img class="header__img-img" src="i-bruk-2.jpg" alt="" />
         </div>
     </header>
     <main>
-        <section id="old-top">
-            <h1>Regnskap på ett sted.<br/>Hjelpen også.</h1>
+        <section id="first-section">
             <div>
+                <h1>Regnskap på ett sted.<br/>Hjelpen også.</h1>
                 <p>Nok Nok er alt du trenger for å gjøre regnskapet ditt, med en ekte hjelper inni appen.</p>
             </div>
-
             <img src="robot.svg" alt="">
         </section>
     </main>
