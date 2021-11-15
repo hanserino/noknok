@@ -16,9 +16,10 @@ function chatScroll($chatItem, $chatList, startTime, endTime, ) {
 
 
 $( document ).ready(function() {
+    
     setTimeout(() => { 
         $('body').addClass('ready');
-    }, 500);
+    }, 0);
 
     var chatListEl = $("#chat-list"), 
         headerEl = $("header"),
