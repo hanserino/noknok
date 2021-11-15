@@ -8,6 +8,9 @@ var express = require('express'),
 
 var app = express();
 
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
+app.use('/assets', express.static(__dirname + '/assets/'));
+
 // Create `ExpressHandlebars` instance with a default layout.
 var hbs = exphbs.create({
     helpers      : helpers,
@@ -61,42 +64,13 @@ app.get('/', function (req, res) {
     });
 });
 
-app.get('/yell', function (req, res) {
-    res.render('yell', {
-        title: 'Yell',
-
-        // This `message` will be transformed by our `yell()` helper.
-        message: 'hello world'
+app.get('/chat', function (req, res) {
+    res.render('chat', {
+        title: 'Nok Nok Chat'
     });
 });
 
-app.get('/exclaim', function (req, res) {
-    res.render('yell', {
-        title  : 'Exclaim',
-        message: 'hello world',
 
-        // This overrides _only_ the default `yell()` helper.
-        helpers: {
-            yell: function (msg) {
-                return (msg + '!!!');
-            }
-        }
-    });
-});
-
-app.get('/echo/:message?', exposeTemplates, function (req, res) {
-    res.render('echo', {
-        title  : 'Echo',
-        message: req.params.message,
-
-        // Overrides which layout to use, instead of the defaul "main" layout.
-        layout: 'shared-templates',
-
-        partials: Promise.resolve({
-            echo: hbs.handlebars.compile('<p>ECHO: {{message}}</p>')
-        })
-    });
-});
 
 app.use(express.static('public/'));
 

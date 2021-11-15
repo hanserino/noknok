@@ -1,0 +1,15 @@
+<li class="chat-list-item {{#if me}}me{{else}}nok{{/if}}{{#if active}} active{{/if}}{{#if next}} next{{/if}}{{#if animate}} animItem{{/if}}">
+    <div class="chat-list-item__inner">
+        {{#if me}}
+        {{else}}
+        <div class="chat-list-item__img">
+            <img src="/assets/img/suit.jpg">
+        </div>
+        {{/if}}
+        <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="chat-list-item__text">
+            {{ text }} 
+        </div>
+    </div>
+</li>
+

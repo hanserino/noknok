@@ -1,0 +1,79 @@
+    <header id="header">
+        {{> page/nav}}
+
+        <div id="chat-container">
+            <ul class="chat-list" id="chat-list">
+
+                {{> chatItem me=true active=true next=true 
+                text="Jeg sitter litt fast.. Jeg spanderte lunsj på en kunde her om dagen. Hvilken post skal dette føres på? "}}
+
+                {{> chatItem me=false active=true next=true 
+                text="Så sant beløpet ikke var på over 500kr og dere ikke drakk alkohol skal denne føres på 7235"}}
+
+                {{> chatItem me=true active=true next=true
+                text="Sweet! Takk for hjelpen!"}}
+
+                {{> chatItem me=false animate=true 
+                text="Det er derfor jeg er er her 😊"}}
+
+                {{> chatItem me=false animate=true 
+                text="Er det noe mer du lurer på? "}}
+
+                {{> chatItem me=true animate=true
+                text="Ja, faktisk!"}}
+
+                {{> chatItem me=true me=true animate=true
+                text="Jeg vurderer å sette opp en repeterende faktura. Koster dette noe ekstra?"}}
+                
+                {{> chatItem me=false animate=true 
+                text="Nei, dette er inkludert i prisen. Vil du ha hjelp med å sette det opp?"}}
+                
+                {{> chatItem me=true me=true animate=true
+                text="Gjerne det! 😊"}}
+
+                {{> chatItem me=false animate=true 
+                text="I menyen, trykk på Salg -> Repeterende fakturaer -> Ny repeterende faktura" }}
+                
+                {{> chatItem me=false animate=true
+                text="Finner du fram?"}}
+
+                {{> chatItem me=true me=true animate=true
+                text="Der ja! Sweet. Da ordnet det seg" }}
+
+                {{> chatItem me=false animate=true 
+                text="Er det noe mer du lurer på?" }}
+
+                {{> chatItem me=true me=true animate=true
+                text="Nei, da tror jeg at jeg er good."}}
+
+                {{> chatItem me=false animate=true 
+                text="Ha en fin dag da!" }}
+
+                {{> chatItem me=true me=true animate=true
+                text="Takk det samme" }}
+
+            </ul>
+        </div> 
+
+        <div class="header__img">
+            <img class="header__img-img" src="/assets/img/bg-1.jpg" alt="" />
+        </div>
+
+    </header>
+
+    <main>
+        <section id="first-section">
+            <div>
+                <h1>Regnskap på ett sted.<br/>Hjelpen også.</h1>
+                <p>Nok Nok er alt du trenger for å gjøre regnskapet ditt, med en ekte hjelper inni appen. Et faktisk menneske!</p>
+            </div>
+            <img src="/assets/img/robot.svg" alt="">
+        </section>
+    </main>
+    
+
+    <script src="/assets/js/main.js"></script>
+    
+</body>
+
+</html>
