@@ -8,8 +8,12 @@
         {{/if}}
         <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
         <div class="chat-list-item__text">
-            {{ text }} 
+        {{#if link}}
+            <a href="{{ text }}">{{ linktext }}</a>
+        {{else}}
+            {{ text }}
         </div>
+        {{/if}}
     </div>
 </li>
 

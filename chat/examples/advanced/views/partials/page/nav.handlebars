@@ -1,14 +1,21 @@
 <nav class="nav">
     <div class="nav__inner">
         <a href="/" class="nav__logo">
-            <img src="/assets/img/logo.svg" alt="">
+            {{>logo green=true }}
         </a>
 
         <ul class="nav__menu">
             <li class="nav__menu-item"><a href="">Priser</a></li>
             <li class="nav__menu-item"><a href="">Artikler</a></li>
+            <li class="nav__menu-item"><a href="">Hjelp</a></li>
+            <li class="nav__menu-item"><a href="">Start AS</a></li>
             <li class="nav__menu-item"><a href="">Om Nok Nok</a></li>
-            <li class="nav__menu-item"><a href="">Prøv gratis</a></li>
+            <li class="nav__menu-item nav__menu-item__try">
+                <a href="" class="try">
+                    <span>Prøv gratis</span>
+                    <svg class="icon icon-arrow-right hide-on-mobile"><use xlink:href="#icon-arrow-right"></use></svg>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>

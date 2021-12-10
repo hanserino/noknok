@@ -2,14 +2,14 @@ function chatScroll($chatItem, $chatList, startTime, endTime, ) {
     setTimeout(() => { 
         setTimeout(() => { 
             $chatItem.addClass('active');
-
-            $chatList.animate({
-                scrollTop: $chatList.find('.active').last().offset().top
-            }, 500);
+            var height = $chatList[0].scrollHeight;
+            
+            $chatList.scrollTop(height);
 
             setInterval(function() {  
                 $chatItem.addClass('next');               
-            }, 3000);  
+            }, 2800);
+
         }, endTime);
     }, startTime);
 }
@@ -33,7 +33,6 @@ $( document ).ready(function() {
         chatScroll($(this), chatListEl, highlightTime, unhighlightTime);
 
     });
-
 
     chatListEl.css("height", headerEl.height());
 
