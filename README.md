@@ -1,7 +1,5 @@
-Express Handlebars
-==================
-
-[![Join the chat at https://gitter.im/ericf/express-handlebars](https://badges.gitter.im/ericf/express-handlebars.svg)](https://gitter.im/ericf/express-handlebars?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Nok Nok Regnskaps lekegrind
+===========================
 
 A [Handlebars][] view engine for [Express][] which doesn't suck.
 
@@ -18,43 +16,6 @@ A [Handlebars][] view engine for [Express][] which doesn't suck.
 [dep-status]: https://david-dm.org/ericf/express-handlebars
 [dep-badge]: https://img.shields.io/david/ericf/express-handlebars.svg?style=flat-square
 [jneen-exphbs]: https://github.com/jneen/express-handlebars
-
-
-## Goals & Design
-
-I created this project out of frustration with the existing Handlebars view engines for Express. As of version 3.x, Express got out of the business of being a generic view engine — this was a great decision — leaving developers to implement the concepts of layouts, partials, and doing file I/O for their template engines of choice.
-
-### Goals and Features
-
-After building a half-dozen Express apps, I developed requirements and opinions about what a Handlebars view engine should provide and how it should be implemented. The following is that list:
-
-* Add back the concept of "layout", which was removed in Express 3.x.
-
-* Add back the concept of "partials" via Handlebars' partials mechanism.
-
-* Support a directory of partials; e.g., `{{> foo/bar}}` which exists on the file system at `views/partials/foo/bar.handlebars`, by default.
-
-* Smart file system I/O and template caching. When in development, templates are always loaded from disk. In production, raw files and compiled templates are cached, including partials.
-
-* All async and non-blocking. File system I/O is slow and servers should not be blocked from handling requests while reading from disk. I/O queuing is used to avoid doing unnecessary work.
-
-* Ability to easily precompile templates and partials for use on the client, enabling template sharing and reuse.
-
-* Ability to use a different Handlebars module/implementation other than the Handlebars npm package.
-
-### Package Design
-
-This package was designed to work great for both the simple and complex use cases. I _intentionally_ made sure the full implementation is exposed and is easily overridable.
-
-The package exports a function which can be invoked with no arguments or with a `config` object and it will return a function (closed over sensible defaults) which can be registered with an Express app. It's an engine factory function.
-
-This exported engine factory has two properties which expose the underlying implementation:
-
-* `ExpressHandlebars()`: The constructor function which holds the internal implementation on its `prototype`. This produces instance objects which store their configuration, `compiled` and `precompiled` templates, and expose an `engine()` function which can be registered with an Express app.
-
-* `create()`: A convenience factory function for creating `ExpressHandlebars` instances.
-
-An instance-based approach is used so that multiple `ExpressHandlebars` instances can be created with their own configuration, templates, partials, and helpers.
 
 
 ## Installation

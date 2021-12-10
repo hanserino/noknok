@@ -3,7 +3,7 @@
 var Promise = global.Promise || require('promise');
 
 var express = require('express'),
-    exphbs  = require('../../'), // "express-handlebars"
+    exphbs  = require('../'), // "express-handlebars"
     helpers = require('./lib/helpers');
 
 var app = express();
@@ -21,7 +21,7 @@ var hbs = exphbs.create({
         'shared/templates/',
         'views/partials/'
     ]
-});
+}); 
 
 // Register `hbs` as our view engine using its bound `engine()` function.
 app.engine('handlebars', hbs.engine);
@@ -60,7 +60,7 @@ function exposeTemplates(req, res, next) {
 
 app.get('/', function (req, res) {
     res.render('home', {
-        title: 'Home'
+        title: 'Nok Nok Regnskap'
     });
 });
 
