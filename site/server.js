@@ -20,8 +20,9 @@ var hbs = exphbs.create({
     partialsDir: [
         'shared/templates/',
         'views/partials/'
-    ]
+    ] 
 }); 
+
 
 // Register `hbs` as our view engine using its bound `engine()` function.
 app.engine('handlebars', hbs.engine);
@@ -69,7 +70,6 @@ app.get('/chat', function (req, res) {
         title: 'Nok Nok Chat'
     });
 });
-
 
 
 app.use(express.static('public/'));

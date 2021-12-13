@@ -1,5 +1,5 @@
 {
-  "name": "express-handlebars-advanced-example",
+  "name": "nok-nok-prototype",
   "version": "0.0.0",
   "description": "",
   "private": true,
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Eric Ferraiuolo <eferraiuolo@gmail.com>",
+  "author": "Hans Kristian Smedsrød <eplehans@gmail.com>",
   "license": "BSD",
   "dependencies": {
     "express": "^4.17.1",
