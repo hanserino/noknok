@@ -7,5 +7,9 @@ Denne prototypen er bygget med handlebars og express
 - `npm install`
 - `npm start`
 
+Prototypen skal nå være tilgjengelig på :3000
+
+
+
 
 
